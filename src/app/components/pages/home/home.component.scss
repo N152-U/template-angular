@@ -1,0 +1,65 @@
+div.dataTables_wrapper {
+  width: 800px;
+  margin: 0 auto;
+}
+
+::ng-deep ngb-datepicker-navigation-select select:first-child {
+  display: none;
+}
+.p-paginator-current
+{
+  color: #000000;
+}
+
+.p-col{
+    width: 200px;
+}
+
+.p-col-full{
+  width: 1800px;
+}
+
+.p-export-button{
+  height: 42px;
+    width: 5.357rem;
+    margin: 0px 14px;
+}
+
+.status-contestada {
+  background-color: #32d630;
+  color: white;
+}
+
+.status-no-contestada {
+  background-color: #ef4019;
+  color: white;
+}
+.status-de-conocimiento {
+  background-color: #27e0e5;
+}
+.status-en-elaboracion {
+  background-color: #7d839a;
+  color: white;
+}
+
+.status-badge {
+  border-radius: 2px;
+  padding: 0.25em 0.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}
+.cell-text.clickable{
+ // color: #2196f3 !important;
+}
+
+.cell-text {
+  /* border-radius: 2px; */
+  padding: 0.25em 0.5rem;
+  text-transform: uppercase;
+  /* font-weight: 700; */
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}
+

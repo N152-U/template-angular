@@ -1,0 +1,42 @@
+<!--Herramienta para construir formularios
+        https://bootstrapformbuilder.com/ -->
+
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <h3>Correspondencia por año</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-2 col-lg-3 col-xl-4"></div>
+
+        <div class="col-5 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+          <ng-template ngxPermissionsOnly="seeContent">
+            <button>Boton administrador</button>
+          </ng-template>
+        </div>
+        <div class="col-5 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+          <button>Boton usuario</button>
+        </div>
+      </div>
+      <div>
+        <h1>Permissions loaded</h1>
+        <ul>
+          <li *ngFor="let permission of permissions$ | async | keyvalue">
+            {{ permission.value.name }}
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h1>Roles loaded</h1>
+        <ul>
+          <li *ngFor="let role of roles$ | async | keyvalue">
+            {{ role.value.name }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

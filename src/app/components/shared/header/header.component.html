@@ -1,0 +1,44 @@
+<nav style="background-color: #a11f41" class="navbar navbar-light">
+  <a class="navbar-brand mx-auto" href="#">
+      <img src="assets/images/sacmex.jpg" class="d-inline-block align-top" alt="">
+  </a>
+  <button  *ngIf="hasUser" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="mr-auto"></div>
+      <ul *ngIf="hasUser" class="navbar-nav my-2 my-lg-0">
+          <li class="nav-item dropdown">
+              <a *ngIf="hasUser" class="nav-link dropdown-toggle  user-caption" href="#" id="navbarDropdown" role="button" data-display="static" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="far fa-user"></i> {{ user.firstName }}
+              </a>
+              <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="navbarDropdown">
+                  
+                  <ng-template [ngxPermissionsOnly]="['READ.ROLE']" >
+                    <a class="dropdown-item" routerLinkActive="active" [routerLink]="['managment/manage-roles']">Administrar roles
+                      y permisos</a>
+                 </ng-template>
+                  <ng-template [ngxPermissionsOnly]="['READ.USER']" >
+                    <a class="dropdown-item" routerLinkActive="active" [routerLink]="['managment/manage-users']">Administrar
+                      cuentas de usuario</a>
+                     
+                  </ng-template>
+                  <a
+                  class="dropdown-item"
+                  routerLinkActive="active"
+                  [routerLink]="['profile']"
+                  >Mi cuenta</a
+                >
+
+                  <hr class="dropdown-divider" />
+                  
+              
+              </div>
+          </li>
+      <li class="nav-item active">
+        <a class="nav-link text-danger"  href="#" (click)="logOut()"><i class="fas fa-power-off"></i> Cerrar sesi&oacute;n <span class="sr-only">Cerrar sesi&oacute;n</span></a>
+
+    </li>
+      </ul>
+  </div>
+</nav>
